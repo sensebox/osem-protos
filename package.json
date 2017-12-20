@@ -1,11 +1,20 @@
 {
   "name": "@sensebox/osem-protos",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "proto files for gRPC communication",
-  "repository": "https://github.com/sensebox/osem-protos.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sensebox/osem-protos.git"
+  },
   "author": "Gerald Pape <ubergesundheit@googlemail.com>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "devDependencies": {
+    "semantic-release": "^8.2.0"
   }
 }
