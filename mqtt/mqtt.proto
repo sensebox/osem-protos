@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message RefreshRequest {
+  string box_id = 1;
+}
+
+message RefreshResponse {
+  uint32 result = 1;
+}
+
+service MqttBoxRefresher {
+  rpc RefreshBox (RefreshRequest) returns (RefreshResponse);
+}

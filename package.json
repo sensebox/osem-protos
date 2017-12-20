@@ -1,0 +1,11 @@
+{
+  "name": "@sensebox/osem-protos",
+  "version": "0.0.0",
+  "description": "proto files for gRPC communication",
+  "repository": "https://github.com/sensebox/osem-protos.git",
+  "author": "Gerald Pape <ubergesundheit@googlemail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
