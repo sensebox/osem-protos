@@ -1,13 +1,20 @@
 syntax = "proto3";
 
-message RefreshRequest {
+message ConnectRequest {
   string box_id = 1;
 }
 
-message RefreshResponse {
+message ConnectResponse {
   uint32 result = 1;
 }
 
-service MqttBoxRefresher {
-  rpc RefreshBox (RefreshRequest) returns (RefreshResponse);
+message DisconnectRequest {
+  string box_id = 1;
+}
+
+message DisconnectResponse {}
+
+service MqttService {
+  rpc ConnectBox (ConnectRequest) returns (ConnectResponse);
+  rpc DisconnectBox (DisconnectRequest) returns (DisconnectResponse);
 }
